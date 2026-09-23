@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-mono-code {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .font-display {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+  .font-hebrew {
+    font-family: 'Rubik', sans-serif;
+  }
+  .font-digital {
+    font-family: 'VT323', monospace;
+  }
+}
+
+/* Industrial Grid Background */
+.bg-industrial-grid {
+  background-color: #f3efe6;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hazard Tape Striping */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffea00,
+    #ffea00 12px,
+    #111111 12px,
+    #111111 24px
+  );
+}
+
+.hazard-stripes-subtle {
+  background: repeating-linear-gradient(
+    -45deg,
+    #f2e52e 0,
+    #f2e52e 10px,
+    #242424 10px,
+    #242424 20px
+  );
+}
+
+/* Brutalist hard shadows */
+.brutalist-card {
+  border: 3px solid #111111;
+  box-shadow: 5px 5px 0px #111111;
+  background-color: #ffffff;
+}
+
+.brutalist-card-dark {
+  border: 3px solid #111111;
+  box-shadow: 5px 5px 0px #111111;
+  background-color: #1a1c23;
+  color: #f1f1f1;
+}
+
+.brutalist-button {
+  border: 2px solid #111111;
+  box-shadow: 3px 3px 0px #111111;
+  transition: all 0.08s ease;
+}
+
+.brutalist-button:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #111111;
+}
+
+.brutalist-button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #111111;
+}
+
+/* Vintage Stamp Effect */
+.retro-stamp {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  border: 3px dashed currentColor;
+  transform: rotate(-2deg);
+  letter-spacing: 0.08em;
+}
+
+/* Code container scrollbar */
+pre code {
+  font-family: 'IBM Plex Mono', monospace;
+  tab-size: 4;
+}
+
+/* Print styling for official graded exam report */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .brutalist-card, .brutalist-card-dark {
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    page-break-inside: avoid;
+  }
+}
+

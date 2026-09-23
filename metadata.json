@@ -1,0 +1,7 @@
+{
+  "name": "Hebrew CS Exam Evaluator (בודק מבחנים)",
+  "description": "Automated grading assistant and computer science evaluator for handwritten Hebrew coding exams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
